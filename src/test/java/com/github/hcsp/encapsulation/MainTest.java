@@ -25,11 +25,11 @@ public class MainTest {
 
         Assertions.assertTrue(json.contains("\"fail\""));
 
-        s = com.alibaba.fastjson.JSON.parseObject(s, Student.class);
+        s = com.alibaba.fastjson.JSON.parseObject(json, Student.class);
 
         Assertions.assertEquals("张三", s.getName());
         Assertions.assertEquals(true, s.isRetakingExam());
         Assertions.assertEquals(59, s.getScore());
-        Assertions.assertEquals(true, s.isFail);
+        Assertions.assertEquals(true, s.isFail());
     }
 }
