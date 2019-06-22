@@ -10,7 +10,7 @@ public class MainTest {
     @Test
     public void allFieldsArePrivate() {
         Assertions.assertTrue(
-                Stream.of(com.github.hcsp.encapsulation.Cat.class.getDeclaredFields())
+                Stream.of(com.github.hcsp.encapsulation.Student.class.getDeclaredFields())
                         .map(Field::getModifiers)
                         .allMatch(Modifier::isPrivate));
     }
