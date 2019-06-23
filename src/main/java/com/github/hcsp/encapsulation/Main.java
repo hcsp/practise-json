@@ -1,5 +1,8 @@
 package com.github.hcsp.encapsulation;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+
 public class Main {
     /*
          假设你正在为学校开发一个学生分数记录系统
@@ -25,8 +28,18 @@ public class Main {
 
         student = deserialize(json);
     }
+    private static Gson gson;
+    {
+        GsonBuilder gBuilder = new GsonBuilder();
+        Gson gson = gBuilder.create();
+        this.gson = gson;
+    }
     // 序列化：将Student类转换成JSON字符串
-    public static String serialize(Student student) {}
+    public static String serialize(Student student) {
+        return gson.toJson(student);
+    }
     // 反序列化：将JSON字符串转换成Student对象
-    public static Student deserialize(String json) {}
+    public static Student deserialize(String json) {
+        return gson.fromJson(json, Student.class);
+    }
 }
