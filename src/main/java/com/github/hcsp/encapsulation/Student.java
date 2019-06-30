@@ -11,9 +11,6 @@ public class Student {
     /** 分数 */
     private int score;
 
-    /** 是否挂科 **/
-    private boolean fail;
-
     public String getName() {
         return name;
     }
@@ -42,7 +39,4 @@ public class Student {
         return score < 60;
     }
 
-    public void setFail(boolean fail) {
-        this.fail = fail;
-    }
 }
