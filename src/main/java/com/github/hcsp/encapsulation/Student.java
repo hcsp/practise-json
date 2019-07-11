@@ -11,14 +11,8 @@ public class Student {
     /** 分数 */
     private int score;
 
-    private boolean fail;
-
     public boolean isFail() {
-        return fail;
-    }
-
-    public void setFail(boolean fail) {
-        this.fail = fail;
+        return this.score < 60;
     }
 
     public String getName() {
