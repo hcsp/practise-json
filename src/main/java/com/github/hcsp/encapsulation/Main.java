@@ -1,5 +1,4 @@
 package com.github.hcsp.encapsulation;
-import com.google.gson.Gson;
 
 public class Main {
     /*
@@ -27,13 +26,7 @@ public class Main {
         student = deserialize(json);
     }
     // 序列化：将Student类转换成JSON字符串
-    public static String serialize(Student student) {
-        Gson gson = new Gson();
-        return gson.toJson(student);
-    }
+    public static String serialize(Student student) {}
     // 反序列化：将JSON字符串转换成Student对象
-    public static Student deserialize(String json) {
-        Gson gson = new Gson();
-        return gson.fromJson(json, Student.class);
-    }
+    public static Student deserialize(String json) {}
 }
