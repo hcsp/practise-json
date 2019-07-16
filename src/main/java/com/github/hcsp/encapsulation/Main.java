@@ -24,7 +24,6 @@ public class Main {
         student.setName("张三");
         student.setScore(60);
         student.setRetakingExam(true);
-
         String json = serialize(student);
 
         System.out.println(json);
@@ -32,15 +31,16 @@ public class Main {
         student = deserialize(json);
         System.out.println(student);
     }
+
     // 序列化：将Student类转换成JSON字符串
     public static String serialize(Student student) throws JsonProcessingException {
-
         // Java object to JSON string
         return new ObjectMapper().writeValueAsString(student);
     }
    // 反序列化：将JSON字符串转换成Student对象
     public static Student deserialize(String json) throws IOException {
         ObjectMapper objectMapper = new ObjectMapper();
+
         objectMapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
         return objectMapper.readValue(json, Student.class);
     }

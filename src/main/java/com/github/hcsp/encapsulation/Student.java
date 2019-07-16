@@ -1,7 +1,5 @@
 package com.github.hcsp.encapsulation;
 
-import java.io.Serializable;
-
 public class Student {
     // 请按照Main类的要求，补全本类
     /** 姓名 */
