@@ -38,10 +38,10 @@ public class Student {
     }
 
     public boolean isFail() {
-        return fail;
-    }
-
-    public void setFail(boolean fail) {
-        this.fail = fail;
+        if (score < 60){
+            return true;
+        } else {
+            return false;
+        }
     }
 }
