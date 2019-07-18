@@ -1,5 +1,7 @@
 package com.github.hcsp.encapsulation;
 
+import com.alibaba.fastjson.JSON;
+
 public class Main {
     /*
          假设你正在为学校开发一个学生分数记录系统
