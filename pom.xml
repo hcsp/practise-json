@@ -24,7 +24,6 @@
             <groupId>com.alibaba</groupId>
             <artifactId>fastjson</artifactId>
             <version>1.2.58</version>
-            <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
@@ -38,6 +37,7 @@
             <version>5.4.2</version>
             <scope>test</scope>
         </dependency>
+
     </dependencies>
 
     <build>
