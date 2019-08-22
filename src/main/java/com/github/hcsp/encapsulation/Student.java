@@ -28,10 +28,11 @@ public class Student {
     }
 
     public boolean isFail() {
-        if(score > 60){
+        if(score < 60){
             return true;
-        }
+        }else{
             return false;
+        }
     }
 
 
