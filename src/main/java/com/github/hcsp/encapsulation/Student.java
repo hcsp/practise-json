@@ -45,6 +45,4 @@ public class Student {
     public boolean isFail() {
         return fail;
     }
-
-
 }

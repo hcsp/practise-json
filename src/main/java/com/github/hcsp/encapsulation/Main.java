@@ -24,7 +24,6 @@ public class Main {
         String json = serialize(student);
 
         System.out.println(json);
-
         student = deserialize(json);
     }
 
