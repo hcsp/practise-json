@@ -24,6 +24,11 @@
             <groupId>com.alibaba</groupId>
             <artifactId>fastjson</artifactId>
             <version>1.2.58</version>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.58</version>
             <scope>test</scope>
         </dependency>
         <dependency>
@@ -37,6 +42,12 @@
             <artifactId>junit-jupiter-engine</artifactId>
             <version>5.4.2</version>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.58</version>
+            <scope>compile</scope>
         </dependency>
     </dependencies>
 
