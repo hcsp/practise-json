@@ -34,12 +34,8 @@ public class Student {
     public void setScore(int score) {
         this.score = score;
     }
-<<<<<<< HEAD
-    public boolean isFail () {
-=======
 
     public boolean isFail (){
->>>>>>> 3e9adbac94f34615f0c048b26ed284654c167667
         return this.score < 60;
     }
 }
