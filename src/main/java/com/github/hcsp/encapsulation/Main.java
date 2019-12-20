@@ -1,4 +1,5 @@
 package com.github.hcsp.encapsulation;
+import com.alibaba.fastjson.JSON;
 
 public class Main {
     /*
@@ -22,11 +23,16 @@ public class Main {
         String json = serialize(student);
 
         System.out.println(json);
-
         student = deserialize(json);
     }
     // 序列化：将Student类转换成JSON字符串
-    public static String serialize(Student student) {}
+    public static String serialize(Student student) {
+        return "{\"name\":\"" + student.getName() + "\",\"retakingExam\":" + student.isRetakingExam() +
+                ",\"score\":" + student.getScore() + ",\"fail\":" + student.isFail() + "}";
+    }
     // 反序列化：将JSON字符串转换成Student对象
-    public static Student deserialize(String json) {}
+    public static Student deserialize(String json) {
+        Student etudian = JSON.parseObject(json, Student.class);
+        return etudian;
+    }
 }
