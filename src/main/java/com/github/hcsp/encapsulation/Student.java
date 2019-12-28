@@ -5,7 +5,7 @@ public class Student {
     /** 姓名 */
     private String name;
 
-    /** 是否重考。true为重考，falase为非重考。 */
+    /** 是否重考。true为重考，false为非重考。 */
     private boolean retakingExam;
 
     /** 分数 */
