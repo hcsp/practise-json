@@ -17,6 +17,9 @@ public class Student {
      */
     private int score;
 
+    /**
+     * 是否挂科。true为挂科，false为没有挂科
+     */
     private boolean fail;
 
     public boolean isFail() {
