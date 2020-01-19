@@ -24,9 +24,6 @@ public class Main {
         String json = serialize(student);
 
         System.out.println(json);
-
-        System.out.printf("" + Student.class);
-
         student = deserialize(json);
     }
     // 序列化：将Student类转换成JSON字符串
