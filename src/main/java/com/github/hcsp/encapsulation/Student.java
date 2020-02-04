@@ -16,10 +16,9 @@ public class Student {
      * 分数
      */
     private int score;
-    private boolean fail;
 
     public boolean isFail() {
-        return fail;
+        return score < 60;
     }
 
     public String getName() {
@@ -44,10 +43,5 @@ public class Student {
 
     public void setScore(int score) {
         this.score = score;
-        if (score < 60) {
-            this.fail = true;
-        } else {
-            this.fail = false;
-        }
     }
 }
