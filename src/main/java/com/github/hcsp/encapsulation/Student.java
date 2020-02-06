@@ -38,8 +38,12 @@ public class Student {
     }
 
     public boolean isFail() {
+        if(this.getScore()<60){
+            return  true;
+        }else{
+            return false;
+        }
 
-        return fail;
     }
 
     public void setFail(boolean fail) {

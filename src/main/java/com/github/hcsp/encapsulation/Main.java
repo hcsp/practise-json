@@ -21,10 +21,12 @@ public class Main {
         student.setName("张三");
         student.setScore(60);
         student.setRetakingExam(true);
+        System.out.println("student.getScore()*******"+student.getScore());
         //根据分数判断是否挂科
-        if(student.getScore()<60){
-            student.setFail(true);
-        }else {student.setFail(false);};
+//        if(student.getScore()<60){
+//            student.setFail(true);
+//        }else {student.setFail(false);};
+        student.setFail(student.isFail());
         String json = serialize(student);
         System.out.println("对象Student****"+student);
         System.out.println("待转化的json****"+json);
