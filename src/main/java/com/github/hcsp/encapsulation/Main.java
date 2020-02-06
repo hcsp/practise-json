@@ -1,7 +1,5 @@
 package com.github.hcsp.encapsulation;
 
-import com.alibaba.fastjson.JSON;
-
 public class Main {
     /*
          假设你正在为学校开发一个学生分数记录系统
@@ -21,25 +19,14 @@ public class Main {
         student.setName("张三");
         student.setScore(60);
         student.setRetakingExam(true);
-        System.out.println("student.getScore()*******"+student.getScore());
-        //根据分数判断是否挂科
-//        if(student.getScore()<60){
-//            student.setFail(true);
-//        }else {student.setFail(false);};
-        student.setFail(student.isFail());
         String json = serialize(student);
-        System.out.println("对象Student****"+student);
-        System.out.println("待转化的json****"+json);
+
+        System.out.println(json);
 
         student = deserialize(json);
     }
     // 序列化：将Student类转换成JSON字符串
-    public static String serialize(Student student) {
-        return JSON.toJSONString(student);
-    }
+    public static String serialize(Student student) {}
     // 反序列化：将JSON字符串转换成Student对象
-    public static Student deserialize(String json) {
-        return JSON.parseObject(json,Student.class);
-    }
-    //提交提示成功但实际远程没看到更新代码
+    public static Student deserialize(String json) {}
 }
