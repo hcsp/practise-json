@@ -16,15 +16,9 @@ public class Student {
      * 分数
      */
     private int score;
-    private boolean fail;// 是否挂科，如果分数低于60则返回true，代表挂科
 
     public boolean isFail() {
-        if (getScore() < 60) this.setFail(true);
-        return fail;
-    }
-
-    public void setFail(boolean fail) {
-        this.fail = fail;
+        return score < 60;
     }
 
     public String getName() {
