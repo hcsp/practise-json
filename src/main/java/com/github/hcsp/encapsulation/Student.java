@@ -19,13 +19,8 @@ public class Student {
     private boolean isFail;
 
     public boolean isFail() {
-        return isFail;
+        return score < 60;
     }
-
-    public void setFail(boolean fail) {
-        isFail = fail;
-    }
-
     public String getName() {
         return name;
     }
