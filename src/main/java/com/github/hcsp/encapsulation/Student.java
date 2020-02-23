@@ -36,6 +36,6 @@ public class Student {
     }
 
     public boolean isFail() {
-        return this.score < 60 ? true : false;
+        return this.score < 60;
     }
 }
