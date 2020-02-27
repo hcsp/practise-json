@@ -10,37 +10,4 @@ public class Student {
 
     /** 分数 */
     private int score;
-
-    /** 是否挂科 */
-    private boolean fail;
-
-    public String getName() {
-        return name;
-    }
-
-    public boolean isRetakingExam() {
-        return retakingExam;
-    }
-
-    public int getScore() {
-        return score;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setRetakingExam(boolean retakingExam) {
-        this.retakingExam = retakingExam;
-    }
-
-    public void setScore(int score) {
-        this.score = score;
-        this.fail = score < 60;
-    }
-
-    public boolean isFail() {
-        return fail;
-    }
-
 }
