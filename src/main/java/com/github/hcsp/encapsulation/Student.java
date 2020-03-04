@@ -11,9 +11,6 @@ public class Student {
 	/** 分数 */
 	private int score;
 
-	/** 是否挂科。true为挂科，false为通过。 */
-	private boolean fail;
-
 	public void setName(String name) {
 		this.name = name;
 	}
@@ -24,11 +21,6 @@ public class Student {
 
 	public void setScore(int score) {
 		this.score = score;
-		if (score < 60) {
-			fail = true;
-		} else {
-			fail = false;
-		}
 	}
 
 	public String getName() {
@@ -44,6 +36,6 @@ public class Student {
 	}
 
 	public boolean isFail() {
-		return fail;
+		return score < 60;
 	}
 }
