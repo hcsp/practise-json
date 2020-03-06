@@ -53,10 +53,6 @@ public class Student {
 
     public void setScore(int score) {
         this.score = score;
-        if (score >= 60) {
-            this.setFail(false);
-        } else {
-            this.setFail(true);
-        }
+        this.setFail(score < 60);
     }
 }
