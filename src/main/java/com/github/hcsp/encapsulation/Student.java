@@ -17,19 +17,10 @@ public class Student {
      */
     private int score;
 
-    /**
-     * 是否挂科，true为挂科，false为没挂科。
-     */
-    private boolean fail;
-
+    // JavaBean约定一个类是否具有某个属性只看其getter/setter的命名
     public boolean isFail() {
-        return fail;
+        return this.score < 60;
     }
-
-    private void setFail(boolean fail) {
-        this.fail = fail;
-    }
-
 
     public String getName() {
         return name;
@@ -53,6 +44,6 @@ public class Student {
 
     public void setScore(int score) {
         this.score = score;
-        this.setFail(score < 60);
+        isFail();
     }
 }
