@@ -17,11 +17,6 @@ public class Student {
      */
     private int score;
 
-    /**
-     * 是否挂科 ，分数低于60为true 挂科，false 没挂科
-     */
-    private boolean fail;
-
     public String getName() {
         return name;
     }
@@ -47,10 +42,16 @@ public class Student {
     }
 
     public boolean isFail() {
-        return fail;
+        return this.score < 60;
     }
 
-    public void setFail(boolean fail) {
-        this.fail = this.score > 60 ? false : true;
+    @Override
+    public String toString() {
+        return "{" + '\n' +
+                "\"name\": \"" + name + "\"," + '\n' +
+                "\"retakingExam\": " + retakingExam + "," + '\n' +
+                "\"score\": " + score + "," + '\n' +
+                "\"fail\": " + isFail() + "," + '\n' +
+                "}";
     }
 }
