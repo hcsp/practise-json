@@ -47,6 +47,10 @@ public class Student {
     }
 
     public void setFail(boolean fail) {
-        this.fail = score < 60;
+        if (score >= 60) {
+            this.fail = false;
+        } else {
+            this.fail = true;
+        }
     }
 }
