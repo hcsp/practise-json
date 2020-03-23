@@ -10,16 +10,9 @@ public class Student {
 
     /** 分数 */
     private int score;
-//    是否挂科
+
+    /** 是否挂科 */
     private boolean fail;
-
-    public boolean isFail() {
-        return fail;
-    }
-
-    public void setFail(boolean fail) {
-        this.fail = fail;
-    }
 
     public String getName() {
         return name;
@@ -43,7 +36,14 @@ public class Student {
 
     public void setScore(int score) {
         this.score = score;
+        if(score >= 60) {
+            this.fail = false;
+        } else {
+            this.fail = true;
+        }
     }
 
-
+    public boolean isFail() {
+        return fail;
+    }
 }
