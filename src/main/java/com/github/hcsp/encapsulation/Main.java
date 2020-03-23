@@ -21,6 +21,7 @@ public class Main {
         student.setName("张三");
         student.setScore(60);
         student.setRetakingExam(true);
+        student.setFail(false);
         String json = serialize(student);
 
         System.out.println(json);
