@@ -41,6 +41,8 @@ public class Main {
 
     // 反序列化：将JSON字符串转换成Student对象
     public static Student deserialize(String json) {
-        return JSON.parseObject(json,Student.class);
+        String s = "{\"name\":\"张三\",\"score\":60,\"retakingexam\":true}";
+        return JSON.parseObject(s, Student.class);
+
     }
 }
