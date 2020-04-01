@@ -1,8 +1,6 @@
 package com.github.hcsp.encapsulation;
 
 public class Student {
-    public static Object Class;
-    // 请按照Main类的要求，补全本类
     /**
      * 姓名
      */
