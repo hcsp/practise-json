@@ -1,25 +1,19 @@
 package com.github.hcsp.encapsulation;
 
-import com.alibaba.fastjson.JSON;
-import com.alibaba.fastjson.JSONObject;
-
-import java.lang.reflect.Type;
-
 public class Main {
-
     /*
-             假设你正在为学校开发一个学生分数记录系统
-             你和前端约定的JSON接口格式是：
-             {
-               "name": "张三",
-               "retakingExam": true,
-               "score": 59,
-               "fail": true // 是否挂科，如果分数低于60则返回true，代表挂科
-             }
-             请：
-             1. 设计并完成Student类
-             2. 挑选一种你喜欢的JSON类库，完成序列化/反序列化的方法
-        */
+         假设你正在为学校开发一个学生分数记录系统
+         你和前端约定的JSON接口格式是：
+         {
+           "name": "张三",
+           "retakingExam": true,
+           "score": 59,
+           "fail": true // 是否挂科，如果分数低于60则返回true，代表挂科
+         }
+         请：
+         1. 设计并完成Student类
+         2. 挑选一种你喜欢的JSON类库，完成序列化/反序列化的方法
+    */
     public static void main(String[] args) {
         Student student = new Student();
         student.setName("张三");
@@ -30,19 +24,9 @@ public class Main {
         System.out.println(json);
 
         student = deserialize(json);
-
     }
-
-
     // 序列化：将Student类转换成JSON字符串
-    public static String serialize(Student student) {
-        return JSON.toJSONString(student);
-    }
-
+    public static String serialize(Student student) {}
     // 反序列化：将JSON字符串转换成Student对象
-    public static Student deserialize(String json) {
-        String s = "{\"name\":\"张三\",\"score\":60,\"retakingexam\":true}";
-        return JSON.parseObject(s, Student.class);
-
-    }
+    public static Student deserialize(String json) {}
 }
