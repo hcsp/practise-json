@@ -21,13 +21,9 @@ public class Main {
         student.setName("张三");
         student.setScore(60);
         student.setRetakingExam(true);
-        student.setFail();
         String json = serialize(student);
-
         System.out.println(json);
-
         student = deserialize(json);
-        System.out.println(student);
     }
 
     // 序列化：将Student类转换成JSON字符串

@@ -30,10 +30,6 @@ public class Student {
         return fail;
     }
 
-    public void setFail() {
-        fail = getScore() < 60;
-    }
-
     public String getName() {
         return name;
     }
@@ -48,6 +44,7 @@ public class Student {
 
     public void setScore(int score) {
         this.score = score;
+        fail = getScore() < 60;
     }
 }
 
