@@ -27,6 +27,7 @@ public class Main {
 
         student = deserialize(json);
     }
+
     // 序列化：将Student类转换成JSON字符串
     public static String serialize(Student student) {
         return JSON.toJSONString(student);
