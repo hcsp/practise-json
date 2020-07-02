@@ -1,6 +1,4 @@
 package com.github.hcsp.encapsulation;
-import com.alibaba.fastjson.JSONObject;
-import com.alibaba.fastjson.annotation.JSONField;
 
 public class Main {
     /*
@@ -28,11 +26,7 @@ public class Main {
         student = deserialize(json);
     }
     // 序列化：将Student类转换成JSON字符串
-    public static String serialize(Student student) {
-        return JSONObject.toJSONString(student);
-    }
+    public static String serialize(Student student) {}
     // 反序列化：将JSON字符串转换成Student对象
-    public static Student deserialize(String json) {
-        return JSONObject.parseObject(json, Student.class);
-    }
+    public static Student deserialize(String json) {}
 }
