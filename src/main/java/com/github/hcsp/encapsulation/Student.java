@@ -2,13 +2,6 @@ package com.github.hcsp.encapsulation;
 
 public class Student {
     // 请按照Main类的要求，补全本类
-//    你和前端约定的JSON接口格式是：
-//    {
-//        "name": "张三",
-//            "retakingExam": true,
-//            "score": 59,
-//            "fail": true // 是否挂科，如果分数低于60则返回true，代表挂科
-//    }
     /** 姓名 */
     private String name;
 
@@ -17,36 +10,4 @@ public class Student {
 
     /** 分数 */
     private int score;
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public boolean isRetakingExam() {
-        return retakingExam;
-    }
-
-    public void setRetakingExam(boolean retakingExam) {
-        this.retakingExam = retakingExam;
-    }
-
-    public int getScore() {
-        return score;
-    }
-
-    public void setScore(int score) {
-        this.score = score;
-    }
-
-    public boolean isFail(){
-        if (this.score >= 60){
-            return false;
-        }else {
-            return true;
-        }
-    }
 }
