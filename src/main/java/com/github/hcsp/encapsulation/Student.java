@@ -11,7 +11,6 @@ public class Student {
     /** 分数 */
     private int score;
 
-    private boolean fail;
 
     public String getName() {
         return name;
@@ -22,9 +21,7 @@ public class Student {
     }
 
     public boolean isFail() {
-        return this.score > 60
-                ? true
-                : false;
+        return this.score < 60;
     }
 
     public void setRetakingExam(boolean retakingExam) {
@@ -39,5 +36,7 @@ public class Student {
         this.score = score;
     }
 
-
+    public boolean isRetakingExam() {
+        return retakingExam;
+    }
 }
