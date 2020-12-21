@@ -38,13 +38,7 @@ public class Student {
     }
 
     public boolean isFail() {
-        return fail;
+        return retakingExam;
     }
 
-    public boolean setFail(int score) {
-        if(score < 60 ) {
-            return true;
-        }
-        return false;
-    }
 }
