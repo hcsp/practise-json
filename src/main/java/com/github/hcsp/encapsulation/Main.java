@@ -1,4 +1,5 @@
 package com.github.hcsp.encapsulation;
+
 import com.alibaba.fastjson.JSON;
 
 public class Main {
