@@ -1,8 +1,12 @@
 package com.github.hcsp.encapsulation;
 
-import com.alibaba.fastjson.JSON;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
+import java.io.IOException;
 
 public class Main {
+    private static ObjectMapper mapper = new ObjectMapper();
     /*
          假设你正在为学校开发一个学生分数记录系统
          你和前端约定的JSON接口格式是：
@@ -16,7 +20,7 @@ public class Main {
          1. 设计并完成Student类
          2. 挑选一种你喜欢的JSON类库，完成序列化/反序列化的方法
     */
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         Student student = new Student();
         student.setName("张三");
         student.setScore(60);
@@ -29,12 +33,12 @@ public class Main {
     }
 
     // 序列化：将Student类转换成JSON字符串
-    public static String serialize(Student student) {
-        return JSON.toJSONString(student);
+    public static String serialize(Student student) throws JsonProcessingException {
+        return mapper.writeValueAsString(student);
     }
 
     // 反序列化：将JSON字符串转换成Student对象
-    public static Student deserialize(String json) {
-        return (Student) JSON.parse(json);
+    public static Student deserialize(String json) throws IOException {
+        return mapper.readValue(json, Student.class);
     }
 }
