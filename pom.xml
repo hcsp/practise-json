@@ -79,6 +79,11 @@
             <artifactId>json-io</artifactId>
             <version>4.12.0</version>
         </dependency>
+        <dependency>
+            <groupId>com.owlike</groupId>
+            <artifactId>genson</artifactId>
+            <version>1.6</version>
+        </dependency>
     </dependencies>
 
     <build>

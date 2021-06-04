@@ -1,11 +1,11 @@
 package com.github.hcsp.encapsulation;
 
-import com.cedarsoftware.util.io.JsonReader;
-import com.cedarsoftware.util.io.JsonWriter;
+import com.owlike.genson.Genson;
 
 import java.io.IOException;
 
 public class Main {
+    private static Genson genson = new Genson();
     /*
          假设你正在为学校开发一个学生分数记录系统
          你和前端约定的JSON接口格式是：
@@ -33,11 +33,11 @@ public class Main {
 
     // 序列化：将Student类转换成JSON字符串
     public static String serialize(Student student) {
-        return JsonWriter.objectToJson(student);
+        return genson.serialize(student);
     }
 
     // 反序列化：将JSON字符串转换成Student对象
     public static Student deserialize(String json) {
-        return (Student) JsonReader.jsonToJava(json);
+        return genson.deserialize(json, Student.class);
     }
 }
