@@ -41,14 +41,14 @@ public class Student {
 
     public void setScore(int score) {
         this.score = score;
+        this.fail = score < 60;
     }
 
     public boolean isFail() {
         return fail;
     }
 
-    public void setFail(boolean fail) {
-        this.fail = fail;
+    public void setFail() {
     }
 }
 
