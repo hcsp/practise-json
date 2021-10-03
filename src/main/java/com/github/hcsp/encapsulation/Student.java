@@ -6,42 +6,8 @@ public class Student {
     private String name;
 
     /** 是否重考。true为重考，falase为非重考。 */
-    private boolean retakingExam;      //true
+    private boolean retakingExam;
 
     /** 分数 */
     private int score;
-
-    private boolean fail;
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public boolean isRetakingExam() {
-        return retakingExam;
-    }
-
-    public void setRetakingExam(boolean retakingExam) {   //设置重考的成绩  true
-        this.retakingExam = retakingExam;
-    }
-
-    public int getScore() {
-        return score;
-    }
-
-    public void setScore(int score) {
-        this.score = score;
-    }
-
-    public boolean isFail() {
-        if (score < 60) {
-            return fail = true;
-        } else {
-            return fail = false;
-        }
-    }
 }
