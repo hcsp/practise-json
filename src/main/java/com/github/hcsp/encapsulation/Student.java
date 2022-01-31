@@ -11,13 +11,7 @@ public class Student {
     /** 分数 */
     private int score;
 
-    public boolean isFail() {
-        return fail;
-    }
 
-    public void setFail(boolean fail) {
-        this.fail = fail;
-    }
 
     private boolean fail;
 
@@ -43,5 +37,13 @@ public class Student {
 
     public void setScore(int score) {
         this.score = score;
+    }
+
+    public boolean isFail() {
+        return fail;
+    }
+
+    public void setFail(boolean fail) {
+        this.fail = fail;
     }
 }
