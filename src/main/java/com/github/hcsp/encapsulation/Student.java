@@ -43,7 +43,9 @@ public class Student {
         return fail;
     }
 
-    public void setFail(boolean fail) {
-        this.fail = fail;
+    public void setFail(int score) {
+        if(score<60) {
+            this.fail = true;
+        }
     }
 }
