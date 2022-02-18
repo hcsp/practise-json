@@ -1,6 +1,12 @@
 package com.github.hcsp.encapsulation;
-
+import com.alibaba.fastjson.JSON;
 public class Main {
+    public static String serialize(Student student) {
+        return JSON.toJSONString(student);
+    }
+    public static Student deserialize(String json) {
+        return JSON.parseObject(json, Student.class);
+    }
     /*
          假设你正在为学校开发一个学生分数记录系统
          你和前端约定的JSON接口格式是：
