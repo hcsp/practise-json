@@ -29,9 +29,11 @@ public class Student {
     public void setName(String name) {
         this.name = name;
     }
+
     public boolean isFail() {
         return fail;
     }
+
     public void setFail(boolean fail) {
         this.fail = fail;
     }

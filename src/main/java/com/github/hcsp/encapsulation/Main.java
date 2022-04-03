@@ -21,6 +21,7 @@ public class Main {
         Student student = new Student();
         student.setName("张三");
         student.setScore(59);
+
         student.setRetakingExam(true);
         if (student.getScore() < 60) {
             student.setFail(true);
