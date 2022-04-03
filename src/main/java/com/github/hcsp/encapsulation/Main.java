@@ -1,9 +1,5 @@
 package com.github.hcsp.encapsulation;
 
-import com.alibaba.fastjson.JSON;
-
-import java.sql.SQLOutput;
-
 public class Main {
     /*
          假设你正在为学校开发一个学生分数记录系统
@@ -18,14 +14,11 @@ public class Main {
          1. 设计并完成Student类
          2. 挑选一种你喜欢的JSON类库，完成序列化/反序列化的方法
     */
-
-
     public static void main(String[] args) {
         Student student = new Student();
         student.setName("张三");
-        student.setScore(59);
+        student.setScore(60);
         student.setRetakingExam(true);
-
         String json = serialize(student);
 
         System.out.println(json);
@@ -33,13 +26,7 @@ public class Main {
         student = deserialize(json);
     }
     // 序列化：将Student类转换成JSON字符串
-    public static String serialize(Student student) {
-        String text = JSON.toJSONString(student);
-        return text;
-    }
+    public static String serialize(Student student) {}
     // 反序列化：将JSON字符串转换成Student对象
-    public static Student deserialize(String json) {
-        Student stu = JSON.parseObject(json, Student.class);
-        return stu;
-    }
+    public static Student deserialize(String json) {}
 }
