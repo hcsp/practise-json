@@ -28,7 +28,6 @@ public class Main {
         } else {
             student.setFail(false);
 
-
         }
         String json = serialize(student);
 
