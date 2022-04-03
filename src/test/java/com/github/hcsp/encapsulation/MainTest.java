@@ -19,6 +19,7 @@ public class MainTest {
     public void canSerializeAndDeserialize() {
         Student s = new Student();
         s.setName("张三");
+
         s.setRetakingExam(true);
         s.setScore(59);
         String json = com.alibaba.fastjson.JSON.toJSONString(s);
