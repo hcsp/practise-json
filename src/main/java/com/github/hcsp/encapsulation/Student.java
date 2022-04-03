@@ -7,25 +7,21 @@ public class Student {
 
     private boolean fail;
 
+
+
+    /** 是否重考。true为重考，falase为非重考。 */
+    private boolean retakingExam;
+    /** 分数 */
+    private int score;
+
+    public Student() {
+    }
     public Student(String name, boolean fail, boolean retakingExam, int score) {
         this.name = name;
         this.fail = fail;
         this.retakingExam = retakingExam;
         this.score = score;
     }
-
-    /** 是否重考。true为重考，falase为非重考。 */
-    private boolean retakingExam;
-    /** 分数 */
-    private int score;
-    public Student(String name, int score, boolean retakingExam) {
-        this.name = name;
-        this.retakingExam = retakingExam;
-        this.score = score;
-    }
-    public Student() {
-    }
-
     public String getName() {
         return name;
     }
