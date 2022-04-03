@@ -29,7 +29,6 @@ public class Main {
             student.setFail(false);
         }
         String json = serialize(student);
-
         System.out.println(json);
         student = deserialize(json);
     }
