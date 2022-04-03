@@ -21,6 +21,7 @@ public class Student {
     private int score;
 
 
+
     public Student(String name, int score, boolean retakingExam) {
         this.name = name;
         this.retakingExam = retakingExam;
