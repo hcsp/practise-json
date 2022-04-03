@@ -17,11 +17,11 @@ public class Main {
          2. 挑选一种你喜欢的JSON类库，完成序列化/反序列化的方法
     */
 
+
     public static void main(String[] args) {
         Student student = new Student();
         student.setName("张三");
-        student.setScore(59);
-
+        student.setScore(60);
         student.setRetakingExam(true);
         if (student.getScore() < 60) {
             student.setFail(true);
@@ -29,9 +29,10 @@ public class Main {
             student.setFail(false);
         }
         String json = serialize(student);
-        System.out.println(json);
-        student = deserialize(json);
 
+        System.out.println(json);
+
+        student = deserialize(json);
     }
     // 序列化：将Student类转换成JSON字符串
     public static String serialize(Student student) {
