@@ -17,7 +17,6 @@ public class Main {
          2. 挑选一种你喜欢的JSON类库，完成序列化/反序列化的方法
     */
 
-
     public static void main(String[] args) {
         Student student = new Student();
         student.setName("张三");
