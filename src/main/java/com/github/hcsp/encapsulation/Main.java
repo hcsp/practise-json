@@ -23,6 +23,11 @@ public class Main {
         student.setName("张三");
         student.setScore(60);
         student.setRetakingExam(true);
+        if (student.getScore() < 60) {
+            student.setFail(true);
+        } else {
+            student.setFail(false);
+        }
         String json = serialize(student);
 
         System.out.println(json);
