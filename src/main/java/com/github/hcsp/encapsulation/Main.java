@@ -32,7 +32,6 @@ public class Main {
 
         System.out.println(json);
 
-
         student = deserialize(json);
     }
     // 序列化：将Student类转换成JSON字符串
