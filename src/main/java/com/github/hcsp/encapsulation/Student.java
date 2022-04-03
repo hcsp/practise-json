@@ -30,6 +30,7 @@ public class Student {
         this.name = name;
     }
 
+
     public boolean isFail() {
         return fail;
     }

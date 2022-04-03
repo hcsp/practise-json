@@ -31,6 +31,7 @@ public class Main {
         String json = serialize(student);
         System.out.println(json);
         student = deserialize(json);
+
     }
     // 序列化：将Student类转换成JSON字符串
     public static String serialize(Student student) {
