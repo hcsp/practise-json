@@ -2,6 +2,8 @@ package com.github.hcsp.encapsulation;
 
 import com.alibaba.fastjson.JSON;
 
+import java.sql.SQLOutput;
+
 public class Main {
     /*
          假设你正在为学校开发一个学生分数记录系统
@@ -21,14 +23,9 @@ public class Main {
     public static void main(String[] args) {
         Student student = new Student();
         student.setName("张三");
-        student.setScore(60);
+        student.setScore(59);
         student.setRetakingExam(true);
-        if (student.getScore() < 60) {
-            student.setFail(true);
-        } else {
-            student.setFail(false);
 
-        }
         String json = serialize(student);
 
         System.out.println(json);

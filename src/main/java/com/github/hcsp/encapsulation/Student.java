@@ -16,7 +16,7 @@ public class Student {
 
     public Student() {
     }
-    public Student(String name, boolean fail, boolean retakingExam, int score) {
+    public Student(String name, boolean retakingExam, int score, boolean fail) {
         this.name = name;
         this.fail = fail;
         this.retakingExam = retakingExam;
@@ -31,6 +31,12 @@ public class Student {
     }
 
     public boolean isFail() {
+        if (this.getScore() < 60) {
+            this.setFail(true);
+        } else {
+            this.setFail(false);
+
+        }
         return fail;
     }
 
