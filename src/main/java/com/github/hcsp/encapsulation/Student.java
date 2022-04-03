@@ -18,8 +18,6 @@ public class Student {
     private boolean retakingExam;
     /** 分数 */
     private int score;
-
-
     public Student(String name, int score, boolean retakingExam) {
         this.name = name;
         this.retakingExam = retakingExam;
