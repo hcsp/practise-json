@@ -24,7 +24,6 @@ public class Student {
         this.score = score;
     }
     public Student() {
-
     }
 
     public String getName() {
