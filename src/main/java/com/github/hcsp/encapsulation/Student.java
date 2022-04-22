@@ -8,33 +8,6 @@ public class Student {
     /** 是否重考。true为重考，falase为非重考。 */
     private boolean retakingExam;
 
-    public int getScore() {
-        return score;
-    }
-
-    public void setScore(int score) {
-        this.score = score;
-    }
-
     /** 分数 */
     private int score;
-
-    public void setName(String name){
-        this.name = name;
-    }
-    public String getName(){
-        return name;
-    }
-
-    public void setRetakingExam(boolean retakingExam){
-        this.retakingExam = retakingExam;
-    }
-
-    public boolean isRetakingExam(){
-        return retakingExam;
-    }
-
-    public boolean isFail(){
-        return this.score < 60 ? true : false;
-    }
 }
