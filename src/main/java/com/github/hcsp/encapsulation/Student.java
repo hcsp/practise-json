@@ -40,7 +40,7 @@ public class Student implements Serializable {
     }
 
     public boolean isFail() {
-        return getScore() < 60 ;
+        return getScore() < 60;
     }
 
     public void setFail(boolean fail) {
