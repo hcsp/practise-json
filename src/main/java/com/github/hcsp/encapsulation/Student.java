@@ -38,7 +38,7 @@ public class Student {
     }
 
     public boolean isFail() {
-        return fail;
+        return getScore()<60;
     }
 
     public void setFail(boolean fail) {
