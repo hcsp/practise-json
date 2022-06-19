@@ -10,18 +10,12 @@ public class Student {
 
     /** 分数 */
     private int score;
+
     /**
-     * 是否挂科，完全有分数决定。如果分数低于60则返回true，代表挂科
+     * 是否挂科，完全由分数决定。如果分数低于60则返回true，代表挂科
      */
-    private boolean fail;
-
     public boolean isFail() {
-        return this.fail;
-//        return this.score<60;
-    }
-
-    public void setFail(boolean fail) {
-        this.fail = fail;
+        return this.score < 60;
     }
 
     public String getName() {
@@ -45,8 +39,6 @@ public class Student {
     }
 
     public void setScore(int score) {
-        //setFail这样的代码实践好吗？有些人是在调用isFail方法时`return this.score<60;`
-        setFail(score < 60);
         this.score = score;
     }
 }
