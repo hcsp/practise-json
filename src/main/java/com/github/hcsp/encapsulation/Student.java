@@ -10,6 +10,7 @@ public class Student {
 
     /** 分数 */
     private int score;
+    private boolean fail;
 
     public String getName() {
         return name;
@@ -21,6 +22,14 @@ public class Student {
 
     public boolean isRetakingExam() {
         return retakingExam;
+    }
+
+    public boolean isFail() {
+        return fail;
+    }
+
+    public void setFail(boolean fail) {
+        this.fail = fail;
     }
 
     public void setRetakingExam(boolean retakingExam) {
