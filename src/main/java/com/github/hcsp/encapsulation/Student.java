@@ -10,6 +10,18 @@ public class Student {
 
     /** 分数 */
     private int score;
+    private boolean fail;
+
+    public boolean isFail() {
+        if (score < 60) {
+            return true;
+        }
+        return fail;
+    }
+
+    public void setFail(boolean fail) {
+        this.fail = fail;
+    }
 
     public String getName() {
         return name;
