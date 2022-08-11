@@ -1,6 +1,5 @@
 package com.github.hcsp.encapsulation;
 
-import netscape.javascript.JSObject;
 import org.json.JSONObject;
 
 public class Main {
