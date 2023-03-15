@@ -9,14 +9,9 @@ public class Student {
     private boolean retakingExam;
 
     public boolean isFail() {
-        return fail;
+        return score < 60;
     }
 
-    public void setFail(boolean fail) {
-        this.fail = fail;
-    }
-
-    private boolean fail;
 
     /** 分数 */
     private int score;
