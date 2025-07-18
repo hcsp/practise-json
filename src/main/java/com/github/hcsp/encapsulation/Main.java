@@ -1,4 +1,7 @@
 package com.github.hcsp.encapsulation;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.node.ObjectNode;
 
 public class Main {
     /*
@@ -14,19 +17,27 @@ public class Main {
          1. 设计并完成Student类
          2. 挑选一种你喜欢的JSON类库，完成序列化/反序列化的方法
     */
-    public static void main(String[] args) {
-        Student student = new Student();
-        student.setName("张三");
-        student.setScore(60);
-        student.setRetakingExam(true);
-        String json = serialize(student);
+    public static void main(String[] args) throws JsonProcessingException {       // 程序开始
+        Student student = new Student();           // new 一个 student 对象
+        student.setName("张三");                    // 给 student 赋名
+        student.setScore(60);                       // 给 student 对象赋值
+        student.setRetakingExam(true);              // 给 student 对象赋值为 true
 
-        System.out.println(json);
+        String json = serialize(student);           // 将对象序列化为 json 字符串
 
-        student = deserialize(json);
+        System.out.println(json);                   // 输出 json 字符串
+
+        student = deserialize(json);                // 将 json 字符串反序列化为对象
     }
-    // 序列化：将Student类转换成JSON字符串
-    public static String serialize(Student student) {}
-    // 反序列化：将JSON字符串转换成Student对象
-    public static Student deserialize(String json) {}
+
+    public static String serialize(Student student) throws JsonProcessingException {
+        ObjectMapper mapper = new ObjectMapper();
+        ObjectNode node = mapper.valueToTree(student);
+        return mapper.writeValueAsString(node);
+    }
+
+    public static Student deserialize(String json) throws JsonProcessingException {
+        ObjectMapper mapper = new ObjectMapper();
+        return mapper.readValue(json,Student.class);
+    }
 }
