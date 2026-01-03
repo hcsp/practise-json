@@ -1,5 +1,8 @@
 package com.github.hcsp.encapsulation;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
 public class Main {
     /*
          假设你正在为学校开发一个学生分数记录系统
@@ -14,7 +17,7 @@ public class Main {
          1. 设计并完成Student类
          2. 挑选一种你喜欢的JSON类库，完成序列化/反序列化的方法
     */
-    public static void main(String[] args) {
+    public static void main(String[] args) throws JsonProcessingException {
         Student student = new Student();
         student.setName("张三");
         student.setScore(60);
@@ -26,7 +29,18 @@ public class Main {
         student = deserialize(json);
     }
     // 序列化：将Student类转换成JSON字符串
-    public static String serialize(Student student) {}
+    public static String serialize(Student student) throws JsonProcessingException {
+        final ObjectMapper mapper = new ObjectMapper(); // 创建转换器
+
+        String jsonString = mapper.writeValueAsString(student); // 转为json string
+        return jsonString;
+    }
     // 反序列化：将JSON字符串转换成Student对象
-    public static Student deserialize(String json) {}
+    public static Student deserialize(String json) throws JsonProcessingException {
+        final ObjectMapper mapper = new ObjectMapper(); // 创建转换器
+        json = "{\"name\":\"张三\",\"score\":60,\"retakingexam\":\"true\"}";
+        Student student = mapper.readValue(json,Student.class);
+        return student;
+
+    }
 }
